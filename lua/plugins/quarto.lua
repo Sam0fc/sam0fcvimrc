@@ -157,7 +157,6 @@ return {
       { '<leader>qm', ':lua require"nabla".toggle_virt()<cr>', desc = 'toggle [m]ath equations' },
     },
   },
-  {'willothy/wezterm.nvim'},
   {
     'benlubas/molten-nvim',
     enabled = true,
@@ -170,24 +169,17 @@ return {
 
       -- this guide will be using image.nvim
       -- Don't forget to setup and install the plugin if you want to view image outputs
-      vim.g.molten_image_provider = "wezterm"
+      vim.g.molten_image_provider = "image.nvim"
 
       -- optional, I like wrapping. works for virt text and the output window
       vim.g.molten_wrap_output = true
 
       -- Output as virtual text. Allows outputs to always be shown, works with images, but can
       -- be buggy with longer images
-      vim.g.molten_virt_text_output = true
+      vim.g.molten_virt_text_output = false
 
       -- this will make it so the output shows up below the \`\`\` cell delimiter
       vim.g.molten_virt_lines_off_by_1 = true
-      vim.keymap.set("n", "<localleader>e", ":MoltenEvaluateOperator<CR>", { desc = "evaluate operator", silent = true })
-      vim.keymap.set("n", "<localleader>os", ":noautocmd MoltenEnterOutput<CR>", { desc = "open output window", silent = true })
-
-      vim.keymap.set("n", "<localleader>e", ":MoltenEvaluateOperator<CR>", { desc = "evaluate operator", silent = true })
-      vim.keymap.set("n", "<localleader>os", ":noautocmd MoltenEnterOutput<CR>", { desc = "open output window", silent = true })
-
-
     end,
     keys = {
       { '<leader>mi', ':MoltenInit<cr>', desc = '[m]olten [i]nit' },
@@ -198,6 +190,9 @@ return {
         desc = 'molten eval visual',
       },
       { '<leader>mr', ':MoltenReevaluateCell<cr>', desc = 'molten re-eval cell' },
+      { '<leader>mo', ':noautocmd MoltenEnterOutput<CR>', desc = 'molten enter output'},
+      { '<leader>me', ':MoltenEvaluateOperator<CR>', desc = 'molten evaluate operator'},
+      { '<leader>ml', ':MoltenEvaluateLine<CR>', desc = 'molten evaluate line'},
     },
   },
 }
