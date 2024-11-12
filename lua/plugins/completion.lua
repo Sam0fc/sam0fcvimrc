@@ -151,6 +151,9 @@ return {
     enabled = true,
     config = function()
       require('copilot').setup {
+        filetypes = {
+        markdown = true,
+        },
         suggestion = {
           enabled = true,
           auto_trigger = true,
@@ -164,7 +167,7 @@ return {
             dismiss = '<C-]>',
           },
         },
-        panel = { enabled = false },
+        panel = { enabled = true },
       }
     end,
   },

@@ -71,7 +71,7 @@ return {
             },
             goto_next_end = {
               [']M'] = '@function.outer',
-              [']['] = '@class.outer',
+              [']['] = '@class.inner',
             },
             goto_previous_start = {
               ['[m'] = '@function.outer',
@@ -79,7 +79,7 @@ return {
             },
             goto_previous_end = {
               ['[M'] = '@function.outer',
-              ['[]'] = '@class.outer',
+              ['[]'] = '@class.inner',
             },
           },
         },

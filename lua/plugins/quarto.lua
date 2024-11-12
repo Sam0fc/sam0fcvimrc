@@ -162,7 +162,8 @@ return {
     enabled = true,
     build = ':UpdateRemotePlugins',
     init = function()
-      vim.g.molten_output_win_max_height = 20
+
+      vim.g.molten_output_win_max_height = 30
             -- I find auto open annoying, keep in mind setting this option will require setting
       -- a keybind for `:noautocmd MoltenEnterOutput` to open the output again
       vim.g.molten_auto_open_output = false
