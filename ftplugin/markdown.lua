@@ -1,5 +1,5 @@
 vim.b.slime_cell_delimiter = '```'
-
+require("quarto").activate()
 -- wrap text, but by word no character
 -- indent the wrappped line
 vim.wo.wrap = true

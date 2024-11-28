@@ -17,7 +17,7 @@ vim.wo.relativenumber = true
 vim.opt.mouse = 'a' -- enable mouse
 vim.opt.mousefocus = true
 vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.timeoutlen = 400 -- until which-key pops up
 vim.opt.updatetime = 250 -- for autocommands and hovers
@@ -30,7 +30,7 @@ vim.opt.showmode = false
 
 -- use less indentation
 local tabsize = 2
-vim.opt.expandtab = true
+vim.opt.expandtab = false
 vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
 
@@ -50,10 +50,13 @@ vim.opt.breakindent = true
 --  See :help 'list'
 --  and :help 'listchars'
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = {tab='| ',trail = '·', nbsp = '␣' }
 
 -- consistent number column
 vim.opt.signcolumn = 'yes:1'
+
+-- line length limit
+vim.opt.colorcolumn = '120'
 
 -- how to show autocomplete menu
 vim.opt.completeopt = 'menuone,noinsert'

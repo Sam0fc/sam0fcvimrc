@@ -139,8 +139,8 @@ nmap('<c-h>', '<c-w>h')
 nmap('<c-l>', '<c-w>l')
 nmap('<c-j>', '<c-w>j')
 nmap('<c-k>', '<c-w>k')
-nmap('H', '<cmd>tabprevious<cr>')
-nmap('L', '<cmd>tabnext<cr>')
+-- nmap('H', '<cmd>tabprevious<cr>')
+-- nmap('L', '<cmd>tabnext<cr>')
 
 local function toggle_light_dark_theme()
   if vim.o.background == 'light' then

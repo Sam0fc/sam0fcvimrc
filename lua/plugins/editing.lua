@@ -10,11 +10,6 @@ return {
     event = 'VeryLazy',
     opts = {},
   },   
-  {
-	"m4xshen/hardtime.nvim",
-  	dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-   	opts = {}
- },
   { -- commenting with e.g. `gcc` or `gcip`
     -- respects TS, so it works in quarto documents 'numToStr/Comment.nvim',
     'numToStr/Comment.nvim',
