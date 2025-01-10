@@ -1,5 +1,5 @@
 -- global options
-
+vim.g.python3_host_prog=vim.fn.expand("~/.venvs/neovim/bin/python3")
 local animals = require('misc.style').animals
 
 -- proper colors
